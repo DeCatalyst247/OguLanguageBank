@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recently Viewed
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+
+        Recently Viewed Words
+
+    </h2>
+
+    {% if words %}
+
+    <div class="row">
+
+        {% for item in words %}
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow-sm">
+
+                <div class="card-body">
+
+                    <h4>
+
+                        {{ item.word.ogu_word }}
+
+                    </h4>
+
+                    <p>
+
+                        Last viewed:
+                        {{ item.viewed_at|date:"M d, Y H:i" }}
+
+                    </p>
+
+                    <a
+                        href="{% url 'dictionary:word_detail' item.word.slug %}"
+                        class="btn btn-success">
+
+                        Open
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="alert alert-info">
+
+        You haven't viewed any words yet.
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

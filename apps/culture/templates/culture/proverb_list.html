@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% block title %}
+Ogu Proverbs
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2 class="mb-4">
+
+Ogu Proverbs
+
+</h2>
+
+<form method="get" class="row g-3 mb-4">
+
+<div class="col-md-4">
+
+<input
+type="text"
+name="search"
+class="form-control"
+placeholder="Search proverb..."
+value="{{ request.GET.search }}">
+
+</div>
+
+<div class="col-md-3">
+
+<select
+name="category"
+class="form-select">
+
+<option value="">
+
+All Categories
+
+</option>
+
+{% for category in categories %}
+
+<option
+value="{{ category.id }}">
+
+{{ category.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<div class="col-md-3">
+
+<select
+name="dialect"
+class="form-select">
+
+<option value="">
+
+All Dialects
+
+</option>
+
+{% for dialect in dialects %}
+
+<option
+value="{{ dialect.id }}">
+
+{{ dialect.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<div class="col-md-2">
+
+<button
+class="btn btn-success w-100">
+
+Search
+
+</button>
+
+</div>
+
+</form>
+
+<div class="row">
+
+{% for proverb in proverbs %}
+
+<div class="col-md-6 mb-4">
+
+<div class="card shadow h-100">
+
+{% if proverb.illustration %}
+
+<img
+
+src="{{ proverb.illustration.url }}"
+
+class="card-img-top">
+
+{% endif %}
+
+<div class="card-body">
+
+{% if proverb.proverb %}
+
+<h5>
+
+{{ proverb.proverb|truncatechars:80 }}
+
+</h5>
+
+{% else %}
+
+<h5>
+
+Illustrated Proverb
+
+</h5>
+
+{% endif %}
+
+<p>
+
+{{ proverb.meaning|truncatewords:20 }}
+
+</p>
+
+<a
+
+href="{% url 'culture:proverb_detail' proverb.pk %}"
+
+class="btn btn-success">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-warning">
+
+No proverbs found.
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

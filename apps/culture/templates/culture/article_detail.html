@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+{{ article.title }}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+{% if article.image %}
+
+<img
+src="{{ article.image.url }}"
+class="img-fluid rounded mb-4">
+
+{% endif %}
+
+<h2>
+
+{{ article.title }}
+
+</h2>
+
+<p class="text-muted">
+
+Category:
+
+{{ article.category.name }}
+
+</p>
+
+<hr>
+
+<p>
+
+{{ article.content|linebreaks }}
+
+</p>
+
+<hr>
+
+<h4>
+
+Related Articles
+
+</h4>
+
+<ul>
+
+{% for related in related_articles %}
+
+<li>
+
+<a href="{% url 'culture:article_detail' related.slug %}">
+
+{{ related.title }}
+
+</a>
+
+</li>
+
+{% empty %}
+
+<li>
+
+No related articles.
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+{% endblock %}

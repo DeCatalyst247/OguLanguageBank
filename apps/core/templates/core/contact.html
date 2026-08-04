@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Contact Us
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<p>
+
+Have a suggestion, correction or question? We'd love to hear from you.
+
+</p>
+
+{% if messages %}
+
+{% for message in messages %}
+
+<div class="alert alert-success">
+
+{{ message }}
+
+</div>
+
+{% endfor %}
+
+{% endif %}
+
+<form method="post">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button
+
+class="btn btn-success"
+
+type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+<hr>
+
+<h4>
+
+Contact Information
+
+</h4>
+
+<p>
+
+<strong>Email:</strong>
+
+info@ogulanguagebank.com
+
+</p>
+
+<p>
+
+<strong>Location:</strong>
+
+Nigeria
+
+</p>
+
+</div>
+
+{% endblock %}

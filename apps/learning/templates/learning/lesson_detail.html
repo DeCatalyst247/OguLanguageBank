@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ lesson.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2>
+
+        {{ lesson.title }}
+
+    </h2>
+
+    <p>
+
+        Category:
+        {{ lesson.category }}
+
+    </p>
+
+    <p>
+
+        Level:
+        {{ lesson.get_level_display }}
+
+    </p>
+
+    <hr>
+
+    <div>
+
+        {{ lesson.content|linebreaks }}
+
+    </div>
+
+    <hr>
+
+    <h3>
+
+        Grammar Topics
+
+    </h3>
+
+    {% for grammar in grammar_topics %}
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <h5>
+
+                {{ grammar.title }}
+
+            </h5>
+
+            <p>
+
+                {{ grammar.explanation }}
+
+            </p>
+
+            <div class="alert alert-light">
+
+                <strong>Example:</strong>
+
+                {{ grammar.example }}
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <p>
+
+        No grammar topics available.
+
+    </p>
+
+    {% endfor %}
+<hr>
+
+<h3>
+
+Lesson Quiz
+
+</h3>
+
+{% if quizzes %}
+
+<div class="list-group">
+
+{% for quiz in quizzes %}
+
+<a
+
+class="list-group-item list-group-item-action"
+
+href="{% url 'quiz:quiz_detail' quiz.pk %}">
+
+{{ quiz.title }}
+
+</a>
+
+{% endfor %}
+
+</div>
+
+{% else %}
+
+<div class="alert alert-warning">
+
+No quiz has been added to this lesson.
+
+</div>
+
+{% endif %}
+</div>
+
+{% endblock %}

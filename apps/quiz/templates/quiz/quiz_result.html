@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %}
+Quiz Result
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-body text-center">
+
+            <h2>
+
+                {{ result.quiz.title }}
+
+            </h2>
+
+            <hr>
+
+            <h3>
+
+                Your Score
+
+            </h3>
+
+            <h1>
+
+                {{ result.score }}
+
+            </h1>
+
+            <h3>
+
+                {{ result.percentage }}%
+
+            </h3>
+
+            {% if result.passed %}
+
+            <div class="alert alert-success">
+
+                Congratulations!
+                You passed.
+
+            </div>
+
+            {% else %}
+
+            <div class="alert alert-danger">
+
+                Sorry,
+                you did not pass.
+
+            </div>
+
+            {% endif %}
+
+            <a
+
+                href="{% url 'quiz:quiz_list' %}"
+
+                class="btn btn-success">
+
+                Take Another Quiz
+
+            </a>
+
+        </div>
+
+    </div>
+<a
+
+href="{% url 'learning:lesson_detail' result.quiz.lesson.pk %}"
+
+class="btn btn-outline-success">
+
+Back to Lesson
+
+</a>
+</div>
+
+{% endblock %}

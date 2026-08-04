@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+My Favorites
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>
+
+My Favorite Words
+
+</h2>
+
+{% if favorites %}
+
+<table class="table table-striped">
+
+<thead>
+
+<tr>
+
+<th>Word</th>
+
+<th>Added</th>
+
+<th></th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for favorite in favorites %}
+
+<tr>
+
+<td>
+
+{{ favorite.word.ogu_word }}
+
+</td>
+
+<td>
+
+{{ favorite.created_at|date:"M d, Y" }}
+
+</td>
+
+<td>
+
+<a
+class="btn btn-success btn-sm"
+href="{% url 'dictionary:word_detail' favorite.word.slug %}">
+
+View
+
+</a>
+
+<a
+class="btn btn-danger btn-sm"
+href="{% url 'dictionary:remove_favorite' favorite.word.slug %}">
+
+Remove
+
+</a>
+
+</td>
+
+
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+{% else %}
+
+<div class="alert alert-info">
+
+You have not added any favorite words yet.
+
+</div>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

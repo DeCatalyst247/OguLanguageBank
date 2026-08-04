@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ word.ogu_word }}
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg">
+
+<div class="card-body">
+
+<h1 class="text-success">
+
+{{ word.ogu_word }}
+
+</h1>
+
+<p>
+
+<strong>Category:</strong>
+
+{{ word.category }}
+
+</p>
+
+<p>
+
+<strong>Dialect:</strong>
+
+{{ word.dialect }}
+
+</p>
+
+<p>
+
+<strong>Part of Speech:</strong>
+
+{{ word.part_of_speech }}
+
+</p>
+
+<p>
+
+<strong>Views:</strong>
+
+{{ word.views }}
+
+</p>
+
+<hr>
+
+<h3>English Translations</h3>
+
+<ul>
+
+{% for item in translations %}
+
+<li>{{ item.translation }}</li>
+
+{% empty %}
+
+<li>No translation available.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Meanings</h3>
+
+<ul>
+
+{% for item in meanings %}
+
+<li>{{ item.meaning }}</li>
+
+{% empty %}
+
+<li>No meaning available.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Example Sentences</h3>
+
+{% for item in examples %}
+
+<div class="mb-3">
+
+<strong>Ogu:</strong>
+
+{{ item.ogu_sentence }}
+
+<br>
+
+<strong>English:</strong>
+
+{{ item.english_sentence }}
+
+</div>
+
+{% empty %}
+
+<p>No examples yet.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>Alternative Spellings</h3>
+
+<ul>
+
+{% for item in alternative_spellings %}
+
+<li>{{ item.spelling }}</li>
+
+{% empty %}
+
+<li>None.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Pronunciations</h3>
+
+{% for item in pronunciations %}
+
+<p>
+
+{{ item.dialect }}
+
+</p>
+
+{% if item.audio %}
+
+<audio controls>
+
+<source src="{{ item.audio.url }}">
+
+</audio>
+
+{% endif %}
+
+{% empty %}
+
+<p>No pronunciation uploaded.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>Synonyms</h3>
+
+<ul>
+
+{% for item in synonyms %}
+
+<li>{{ item.synonym }}</li>
+
+{% empty %}
+
+<li>No synonyms.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Antonyms</h3>
+
+<ul>
+
+{% for item in antonyms %}
+
+<li>{{ item.antonym }}</li>
+
+{% empty %}
+
+<li>No antonyms.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Related Words</h3>
+
+<ul>
+
+{% for item in related_words %}
+
+<li>{{ item.related_word }}</li>
+
+{% empty %}
+
+<li>No related words.</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>Images</h3>
+
+<div class="row">
+
+{% for item in images %}
+
+<div class="col-md-4 mb-3">
+
+<img src="{{ item.image.url }}"
+class="img-fluid rounded">
+
+</div>
+
+{% empty %}
+
+<p>No images.</p>
+
+{% endfor %}
+
+</div>
+
+<hr>
+
+<h3>Videos</h3>
+
+{% for item in videos %}
+
+<video controls width="100%">
+
+<source src="{{ item.video.url }}">
+
+</video>
+
+{% empty %}
+
+<p>No videos.</p>
+
+{% endfor %}
+
+<hr>
+
+
+<div class="mt-4">
+
+<h5>
+
+Average Rating
+<a
+href="{% url 'dictionary:rate_word' word.slug %}"
+class="btn btn-warning">
+
+⭐️⭐️⭐️⭐️⭐️ Rate this Word
+
+</a>
+</h5>
+
+<p>
+
+⭐️ {{ word.average_rating }}/5
+
+</p>
+
+</div>
+<a href="{% url 'dictionary:word_list' %}"
+
+class="btn btn-success">
+
+Back to Dictionary
+
+</a>
+
+{% if user.is_authenticated %}
+
+    {% if is_favorite %}
+
+        <a
+        href="{% url 'dictionary:remove_favorite' word.slug %}"
+        class="btn btn-warning">
+
+        ❤️ Remove Favorite
+
+        </a>
+
+    {% else %}
+
+        <a
+        href="{% url 'dictionary:favorite_word' word.slug %}"
+        class="btn btn-danger">
+
+        ❤️ Add to Favorites
+
+        </a>
+
+    {% endif %}
+
+{% endif %}
+
+
+
+
+
+</div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}
+Lessons
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Ogu Lessons
+    </h2>
+
+    {% for lesson in lessons %}
+
+    <div class="card mb-3">
+
+        <div class="card-body">
+
+            <h4>
+
+                <a href="{% url 'learning:lesson_detail' lesson.slug %}">
+
+                    {{ lesson.title }}
+
+                </a>
+
+            </h4>
+
+            <p>
+
+                Category:
+                {{ lesson.category }}
+
+            </p>
+
+            <p>
+
+                Level:
+                {{ lesson.get_level_display }}
+
+            </p>
+
+        </div>
+
+    </div>
+
+    {% empty %}
+
+    <div class="alert alert-info">
+
+        No lessons available.
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

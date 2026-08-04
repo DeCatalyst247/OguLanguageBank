@@ -1,0 +1,287 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dictionary
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+    <h1 class="mb-4">
+        Ogu Dictionary
+    </h1>
+
+    <form method="get" class="row g-3 mb-4">
+
+        <div class="col-md-4">
+
+            <input
+                type="text"
+                name="search"
+                class="form-control"
+                placeholder="Search Ogu or English..."
+                value="{{ request.GET.search }}">
+
+        </div>
+
+        <div class="col-md-2">
+
+            <select
+                name="category"
+                class="form-select">
+
+                <option value="">Category</option>
+
+                {% for category in categories %}
+
+                <option
+                    value="{{ category.id }}"
+                    {% if request.GET.category == category.id|stringformat:"s" %}selected{% endif %}>
+
+                    {{ category.name }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <div class="col-md-2">
+
+            <select
+                name="dialect"
+                class="form-select">
+
+                <option value="">Dialect</option>
+
+                {% for dialect in dialects %}
+
+                <option
+                    value="{{ dialect.id }}"
+                    {% if request.GET.dialect == dialect.id|stringformat:"s" %}selected{% endif %}>
+
+                    {{ dialect.name }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <div class="col-md-2">
+
+            <select
+                name="part"
+                class="form-select">
+
+                <option value="">Part of Speech</option>
+
+                {% for part in parts %}
+
+                <option
+                    value="{{ part.id }}"
+                    {% if request.GET.part == part.id|stringformat:"s" %}selected{% endif %}>
+
+                    {{ part.name }}
+
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+        </div>
+
+        <div class="col-md-2">
+
+            <select
+                name="difficulty"
+                class="form-select">
+
+                <option value="">Difficulty</option>
+
+                <option
+                    value="beginner"
+                    {% if request.GET.difficulty == "beginner" %}selected{% endif %}>
+                    Beginner
+                </option>
+
+                <option
+                    value="intermediate"
+                    {% if request.GET.difficulty == "intermediate" %}selected{% endif %}>
+                    Intermediate
+                </option>
+
+                <option
+                    value="advanced"
+                    {% if request.GET.difficulty == "advanced" %}selected{% endif %}>
+                    Advanced
+                </option>
+
+            </select>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <button
+                type="submit"
+                class="btn btn-success">
+
+                Search
+
+            </button>
+
+            <a
+                href="{% url 'dictionary:word_list' %}"
+                class="btn btn-outline-secondary">
+
+                Reset
+
+            </a>
+
+        </div>
+
+    </form>
+
+    <div class="row">
+
+        {% for word in words %}
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow-sm h-100">
+
+                <div class="card-body">
+
+                    <h4>
+
+                        {{ word.ogu_word }}
+
+                    </h4>
+
+                    <p>
+
+                        <strong>Category:</strong>
+
+                        {{ word.category }}
+
+                    </p>
+
+                    <p>
+
+                        <strong>Dialect:</strong>
+
+                        {{ word.dialect }}
+
+                    </p>
+
+                    <p>
+
+                        <strong>Part of Speech:</strong>
+
+                        {{ word.part_of_speech }}
+
+                    </p>
+
+                    <p>
+
+                        <strong>Difficulty:</strong>
+
+
+                        {{ word.get_difficulty_display }}
+
+                    </p>
+
+                    <a
+                        href="{% url 'dictionary:word_detail' word.slug %}"
+                        class="btn btn-success">
+
+                        View Details
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="col-12">
+
+            <div class="alert alert-warning">
+
+                No published words found.
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% if page_obj %}
+
+    <nav class="mt-4">
+
+        <ul class="pagination justify-content-center">
+
+            {% if page_obj.has_previous %}
+
+            <li class="page-item">
+
+                <a
+                    class="page-link"
+                    href="?page={{ page_obj.previous_page_number }}">
+
+                    Previous
+
+                </a>
+
+            </li>
+
+            {% endif %}
+
+            <li class="page-item active">
+
+                <span class="page-link">
+
+                    {{ page_obj.number }}
+
+                </span>
+
+            </li>
+
+            {% if page_obj.has_next %}
+
+            <li class="page-item">
+
+                <a
+                    class="page-link"
+                    href="?page={{ page_obj.next_page_number }}">
+
+                    Next
+
+                </a>
+
+            </li>
+
+            {% endif %}
+
+        </ul>
+
+    </nav>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

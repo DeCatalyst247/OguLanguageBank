@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}
+Culture Articles
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>
+
+Culture Articles
+
+</h2>
+
+<form method="get" class="row mb-4">
+
+<div class="col-md-5">
+
+<input
+type="text"
+name="search"
+class="form-control"
+placeholder="Search articles..."
+value="{{ request.GET.search }}">
+
+</div>
+
+<div class="col-md-5">
+
+<select
+name="category"
+class="form-select">
+
+<option value="">
+
+All Categories
+
+</option>
+
+{% for category in categories %}
+
+<option
+value="{{ category.id }}">
+
+{{ category.name }}
+
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+<div class="col-md-2">
+
+<button
+class="btn btn-success w-100">
+
+Search
+
+</button>
+
+</div>
+
+</form>
+
+<div class="row">
+
+{% for article in articles %}
+
+<div class="col-md-6 mb-4">
+
+<div class="card h-100 shadow">
+
+<div class="card-body">
+
+<h4>
+
+{{ article.title }}
+
+</h4>
+
+<p>
+
+{{ article.summary }}
+
+</p>
+
+<a
+href="{% url 'culture:article_detail' article.slug %}"
+class="btn btn-success">
+
+Read Article
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-warning">
+
+No articles found.
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

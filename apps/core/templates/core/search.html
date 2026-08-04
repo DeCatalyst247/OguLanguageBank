@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Search
+
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2>
+
+Search Results
+
+</h2>
+
+{% if query %}
+
+<p>
+
+Results for
+
+<strong>
+
+"{{ query }}"
+
+</strong>
+
+</p>
+
+{% else %}
+
+<div class="alert alert-info">
+
+Enter a search term.
+
+</div>
+
+{% endif %}
+
+<hr>
+
+<h3>
+
+Dictionary Words
+
+</h3>
+
+{% for word in words %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+<a href="{% url 'dictionary:word_detail' word.slug %}">
+
+{{ word.ogu_word }}
+
+</a>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No words found.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>
+
+Lessons
+
+</h3>
+
+{% for lesson in lessons %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+<a href="{% url 'learning:lesson_detail' lesson.slug %}">
+
+{{ lesson.title }}
+
+</a>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No lessons found.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>
+
+Culture Articles
+
+</h3>
+
+{% for article in articles %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+<a href="{% url 'culture:article_detail' article.slug %}">
+
+{{ article.title }}
+
+</a>
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No articles found.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>
+
+Proverbs
+
+</h3>
+
+{% for proverb in proverbs %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+{{ proverb.title }}
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No proverbs found.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>
+
+Festivals
+
+</h3>
+
+{% for festival in festivals %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+{{ festival.name }}
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No festivals found.</p>
+
+{% endfor %}
+
+<hr>
+
+<h3>
+
+Historical Figures
+
+</h3>
+
+{% for person in historical_figures %}
+
+<div class="card mb-2">
+
+<div class="card-body">
+
+{{ person.name }}
+
+</div>
+
+</div>
+
+{% empty %}
+
+<p>No historical figures found.</p>
+
+{% endfor %}
+
+</div>
+
+{% endblock %}

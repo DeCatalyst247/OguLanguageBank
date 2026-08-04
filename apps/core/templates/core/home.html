@@ -1,0 +1,466 @@
+{% extends "base.html" %}
+
+{% block title %}
+Ogu Language Bank
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="bg-success text-white py-5">
+    <div class="container text-center">
+
+        <h1 class="display-4 fw-bold">
+            Ogu Language Bank
+        </h1>
+
+        <p class="lead">
+            Preserving the Ogu Language, Culture and Heritage for Future Generations.
+        </p>
+
+        <form method="get" action="{% url 'dictionary:word_list' %}" class="mt-4">
+
+            <div class="input-group input-group-lg">
+
+                <input
+                    type="text"
+                    name="search"
+                    class="form-control"
+                    placeholder="Search Ogu or English word...">
+
+                <button class="btn btn-light">
+
+                    Search
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<!-- WORD OF THE DAY -->
+<div class="container mt-5">
+
+    <h2 class="mb-3">
+        Word of the Day
+    </h2>
+
+    {% if word_of_the_day %}
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h3>
+
+                {{ word_of_the_day.word.ogu_word }}
+
+            </h3>
+
+            <p>
+
+                Discover today's featured Ogu word.
+
+            </p>
+
+            <a
+                href="{% url 'dictionary:word_detail' word_of_the_day.word.slug %}"
+                class="btn btn-success">
+
+                Learn More
+
+            </a>
+
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <div class="alert alert-warning">
+
+        No Word of the Day available.
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+<!-- LATEST WORDS -->
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Latest Dictionary Words
+    </h2>
+
+    <div class="row">
+
+        {% for word in latest_words %}
+
+        <div class="col-md-3 mb-4">
+
+            <div class="card shadow-sm h-100">
+
+                <div class="card-body">
+
+                    <h5>
+
+                        {{ word.ogu_word }}
+
+                    </h5>
+
+                    <p>
+
+                        {{ word.category }}
+
+                    </p>
+
+                    <a
+                        href="{% url 'dictionary:word_detail' word.slug %}"
+                        class="btn btn-outline-success">
+
+                        View Word
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="col-12">
+
+            <div class="alert alert-warning">
+
+                No words available.
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<!-- FEATURED LESSON -->
+{% if featured_lesson %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-3">
+
+        Featured Lesson
+
+    </h2>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h4>
+
+                {{ featured_lesson.title }}
+
+            </h4>
+
+            <p>
+
+                Continue learning Ogu with this lesson.
+
+            </p>
+
+            <a
+                href="{% url 'learning:lesson_detail' featured_lesson.slug %}"
+                class="btn btn-success">
+
+                Start Lesson
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+<!-- FEATURED QUIZ -->
+{% if featured_quiz %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-3">
+
+        Featured Quiz
+
+    </h2>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h4>
+
+                {{ featured_quiz.title }}
+
+            </h4>
+
+            <p>
+
+                Test your knowledge.
+
+            </p>
+
+            <a
+                href="{% url 'quiz:quiz_detail' featured_quiz.pk %}"
+                class="btn btn-success">
+
+                Take Quiz
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+<!-- FEATURED PROVERB -->
+{% if featured_proverb %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-3">
+
+        Featured Proverb
+
+    </h2>
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h5>
+
+                {{ featured_proverb.proverb }}
+
+
+            </h5>
+
+            <p>
+
+                {{ featured_proverb.meaning|truncatewords:20 }}
+
+            </p>
+
+            <a
+                href="{% url 'culture:proverb_detail' featured_proverb.pk %}"
+                class="btn btn-success">
+
+                Read Proverb
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+<!-- LATEST CULTURE ARTICLES -->
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+
+        Latest Culture Articles
+
+    </h2>
+
+    <div class="row">
+
+        {% for article in latest_articles %}
+
+        <div class="col-md-4 mb-4">
+
+            <div class="card shadow h-100">
+
+                {% if article.image %}
+
+                <img
+                    src="{{ article.image.url }}"
+                    class="card-img-top">
+
+                {% endif %}
+
+                <div class="card-body">
+
+                    <h5>
+
+                        {{ article.title }}
+
+                    </h5>
+
+                    <p>
+
+                        {{ article.summary|truncatewords:15 }}
+
+                    </p>
+
+                    <a
+                        href="{% url 'culture:article_detail' article.slug %}"
+                        class="btn btn-outline-success">
+
+                        Read Article
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div class="col-12">
+
+            <div class="alert alert-warning">
+
+                No articles available.
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<!-- STATISTICS -->
+<div class="container mt-5 mb-5">
+
+    <h2 class="text-center mb-4">
+
+        OLB Statistics
+
+    </h2>
+
+    <div class="row text-center">
+
+        <div class="col-md-3 mb-3">
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <h2>
+
+                        {{ word_count }}
+
+                    </h2>
+
+                    <p>
+
+                        Words
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-3">
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <h2>
+
+                        {{ lesson_count }}
+
+                    </h2>
+
+                    <p>
+
+                        Lessons
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-3">
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <h2>
+
+                        {{ quiz_count }}
+
+                    </h2>
+
+                    <p>
+
+                        Quizzes
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-3 mb-3">
+
+            <div class="card shadow">
+
+                <div class="card-body">
+
+                    <h2>
+
+                        {{ proverb_count }}
+
+                    </h2>
+
+                    <p>
+
+                        Proverbs
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

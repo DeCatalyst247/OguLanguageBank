@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+
+{% block title %}
+Quizzes
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">
+        Available Quizzes
+    </h2>
+
+    {% if quizzes %}
+
+    <div class="row">
+
+        {% for quiz in quizzes %}
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card shadow h-100">
+
+                <div class="card-body">
+
+                    <h4>
+                        {{ quiz.title }}
+                    </h4>
+
+                    <p>
+                        {{ quiz.description }}
+                    </p>
+
+                    <p>
+
+                        <strong>Lesson:</strong>
+
+
+                        <a
+
+                         href="{% url 'learning:lesson_detail' quiz.lesson.pk %}">
+
+                        {{ quiz.lesson.title }}
+
+                        </a>
+
+                    </p>
+
+                    <p>
+
+                        <strong>Time:</strong>
+
+                        {{ quiz.time_limit }} minutes
+
+                    </p>
+
+                    <p>
+
+                        <strong>Pass Mark:</strong>
+
+                        {{ quiz.passing_score }}%
+
+                    </p>
+
+                    <a href="{% url 'quiz:quiz_detail' quiz.pk %}"
+
+                       class="btn btn-success">
+
+                        Start Quiz
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% else %}
+
+    <div class="alert alert-warning">
+
+        No quizzes available.
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

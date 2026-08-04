@@ -1,0 +1,214 @@
+<h3 class="mt-5 mb-4">Comments</h3>
+
+{% if user.is_authenticated %}
+
+<form method="post"
+      action="{% url 'dictionary:add_comment' word.slug %}"
+      class="mb-4">
+
+    {% csrf_token %}
+
+    {{ comment_form.as_p }}
+
+    <button type="submit" class="btn btn-success">
+        Post Comment
+    </button>
+
+</form>
+
+{% else %}
+
+<div class="alert alert-info">
+    Please
+    <a href="{% url 'accounts:login' %}">
+        login
+    </a>
+    to post a comment.
+</div>
+
+{% endif %}
+
+<hr>
+
+{% for comment in comments %}
+
+<div class="card shadow-sm mb-4">
+
+    <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <strong>
+                    {{ comment.user.username }}
+                </strong>
+
+                {% if comment.parent %}
+                    <span class="badge bg-secondary ms-2">
+                        Reply
+                    </span>
+                {% endif %}
+
+            </div>
+
+            <small class="text-muted">
+
+                {{ comment.created_at|date:"M d, Y H:i" }}
+
+            </small>
+
+        </div>
+
+        <p class="mt-3">
+
+            {{ comment.content }}
+
+        </p>
+
+        {% if comment.updated_at != comment.created_at %}
+
+        <small class="text-muted">
+
+            Edited
+
+        </small>
+
+        {% endif %}
+
+        <!-- Comment Actions -->
+
+        <div class="mt-3">
+
+            {% if user == comment.user %}
+
+            <a href="{% url 'dictionary:edit_comment' comment.id %}"
+               class="btn btn-sm btn-outline-primary">
+
+                Edit
+
+            </a>
+
+            <a href="{% url 'dictionary:delete_comment' comment.id %}"
+               class="btn btn-sm btn-outline-danger">
+
+                Delete
+
+            </a>
+
+            {% endif %}
+
+            <a href="{% url 'dictionary:like_comment' comment.id %}"
+               class="btn btn-sm btn-outline-success">
+
+                👍 Like ({{ comment.likes.count }})
+
+            </a>
+
+            <a href="{% url 'dictionary:report_comment' comment.id %}"
+               class="btn btn-sm btn-outline-warning">
+
+                🚩 Report
+
+            </a>
+
+        </div>
+
+        <!-- Reply Form -->
+
+        {% if user.is_authenticated %}
+
+        <form method="post"
+              action="{% url 'dictionary:reply_comment' comment.id %}"
+              class="mt-4">
+
+            {% csrf_token %}
+
+            {{ comment_form.as_p }}
+
+            <button type="submit"
+                    class="btn btn-sm btn-success">
+
+                Reply
+
+            </button>
+
+        </form>
+
+        {% endif %}
+
+        <!-- Replies -->
+
+        {% for reply in comment.replies.all %}
+
+        {% if reply.is_approved %}
+
+        <div class="border-start border-3 ps-3 ms-5 mt-4">
+
+            <div class="d-flex justify-content-between">
+
+                <strong>
+
+                    {{ reply.user.username }}
+
+                </strong>
+
+                <small class="text-muted">
+
+                    {{ reply.created_at|date:"M d, Y H:i" }}
+
+                </small>
+
+            </div>
+
+            <p class="mt-2">
+
+                {{ reply.content }}
+
+            </p>
+
+            {% if reply.updated_at != reply.created_at %}
+
+            <small class="text-muted">
+
+                Edited
+
+            </small>
+
+            {% endif %}
+
+        </div>
+
+        {% endif %}
+
+        {% empty %}
+
+        <div class="ms-5 mt-3">
+
+            <small class="text-muted">
+
+                No replies yet.
+
+            </small>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% empty %}
+
+<div class="alert alert-secondary">
+
+    No comments yet.
+
+    <br>
+
+    Be the first to comment on this word.
+
+</div>
+
+{% endfor %}

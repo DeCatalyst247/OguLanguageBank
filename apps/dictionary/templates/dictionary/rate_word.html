@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+Rate Word
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-body">
+
+            <h2>
+
+                Rate "{{ word.ogu_word }}"
+
+            </h2>
+
+            <form method="post">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button
+                    class="btn btn-success">
+
+                    Save Rating
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

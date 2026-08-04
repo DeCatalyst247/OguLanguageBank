@@ -1,0 +1,340 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm sticky-top">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand fw-bold" href="{% url 'core:home' %}">
+            🌍 Ogu Language Bank
+        </a>
+
+        <!-- Mobile Toggle -->
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+
+            <!-- Left Navigation -->
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="{% url 'core:home' %}">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'dictionary:word_list' %}">
+
+                        Dictionary
+
+                    </a>
+
+                </li>
+
+                <!-- Learn Dropdown -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Learn
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'learning:lesson_list' %}">
+
+                                Lessons
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'quiz:quiz_list' %}">
+
+                                Quizzes
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- Culture Dropdown -->
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        Culture
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'culture:home' %}">
+
+                                Culture Home
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'culture:article_list' %}">
+
+                                Articles
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'culture:proverb_list' %}">
+
+                                Proverbs
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <!-- About -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'core:about' %}">
+
+                        About
+
+                    </a>
+
+                </li>
+
+                <!-- Contact -->
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'core:contact' %}">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!-- Global Search -->
+
+            <form
+                class="d-flex mx-lg-3 my-2 my-lg-0"
+                method="get"
+                action="{% url 'core:search' %}">
+
+
+                <input
+                    class="form-control me-2"
+                    type="search"
+                    name="q"
+                    placeholder="Search..."
+                    value="{{ request.GET.q }}">
+
+                <button
+                    class="btn btn-light"
+                    type="submit">
+
+                    Search
+
+                </button>
+
+            </form>
+
+            <!-- Right Navigation -->
+
+            <ul class="navbar-nav ms-lg-3">
+
+                {% if request.user.is_authenticated %}
+
+                <li class="nav-item dropdown">
+
+                    <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown">
+
+                        👋 {{ request.user.username }}
+
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'accounts:profile' %}">
+
+                                My Profile
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'accounts:dashboard' %}">
+
+                                Dashboard
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'dictionary:my_favorites' %}">
+
+                                ❤️ My Favorites
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'favorites:recently_viewed' %}">
+
+                                🕒 Recently Viewed
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'dictionary:contribute_word' %}">
+
+                                Contribute Word
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a class="dropdown-item"
+                               href="{% url 'dictionary:my_contributions' %}">
+
+                                My Contributions
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <hr class="dropdown-divider">
+
+                        </li>
+
+                        <li>
+
+                            <a
+                                class="dropdown-item text-danger"
+                                href="{% url 'accounts:logout' %}">
+
+                                Logout
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                {% else %}
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="{% url 'accounts:login' %}">
+
+                        Login
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="btn btn-light ms-lg-2 mt-2 mt-lg-0"
+                       href="{% url 'accounts:register' %}">
+
+                        Register
+
+                    </a>
+
+                </li>
+
+                {% endif %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>

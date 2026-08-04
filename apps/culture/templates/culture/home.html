@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+Culture
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+<h2 class="mb-4">
+
+Ogu Culture
+
+</h2>
+
+<div class="row">
+
+{% for article in articles %}
+
+<div class="col-md-4 mb-4">
+
+<div class="card shadow h-100">
+
+{% if article.image %}
+
+<img
+src="{{ article.image.url }}"
+class="card-img-top">
+
+{% endif %}
+
+<div class="card-body">
+
+<h5>
+
+{{ article.title }}
+
+</h5>
+
+<p>
+
+{{ article.summary|truncatewords:20 }}
+
+</p>
+
+<a
+href="{% url 'culture:article_detail' article.slug %}"
+class="btn btn-success">
+
+Read More
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+{% endblock %}

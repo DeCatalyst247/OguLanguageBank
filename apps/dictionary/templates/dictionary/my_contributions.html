@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}
+My Contributions
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">My Contributions</h2>
+
+    {% if contributions %}
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-hover align-middle">
+
+            <thead class="table-success">
+
+                <tr>
+                    <th>Word</th>
+                    <th>English Translation</th>
+                    <th>Status</th>
+                    <th>Date Submitted</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                {% for contribution in contributions %}
+
+                <tr>
+
+                    <td>{{ contribution.ogu_word }}</td>
+
+                    <td>{{ contribution.english_translation }}</td>
+
+                    <td>
+
+                        {% if contribution.status == "approved" %}
+
+                        <span class="badge bg-success">
+                            Approved
+                        </span>
+
+                        {% elif contribution.status == "rejected" %}
+
+                        <span class="badge bg-danger">
+                            Rejected
+                        </span>
+
+                        {% else %}
+
+                        <span class="badge bg-warning text-dark">
+                            Pending
+                        </span>
+
+                        {% endif %}
+
+                    </td>
+
+                    <td>{{ contribution.created_at|date:"M d, Y H:i" }}</td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+    <div class="alert alert-info">
+
+        <h5>No Contributions Yet</h5>
+
+        <p>
+            You haven't submitted any words yet.
+        </p>
+
+        <a href="{% url 'dictionary:contribute_word' %}"
+           class="btn btn-success">
+            Contribute Your First Word
+        </a>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

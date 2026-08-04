@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Review Contribution
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <h2>Review Contribution</h2>
+
+    <div class="card mt-3">
+
+        <div class="card-body">
+
+            <h4>{{ contribution.ogu_word }}</h4>
+
+            <p>
+                <strong>English:</strong>
+                {{ contribution.english_translation }}
+            </p>
+
+            <hr>
+
+            <form method="post" enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <button class="btn btn-success">
+
+                    Approve & Create Official Word
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
