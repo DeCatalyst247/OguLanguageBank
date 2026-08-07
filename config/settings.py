@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-l^3jz9q=hgj1qgnl!b((qfcup!-^$&2wfat6=nvxy_$llkxc)h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ogulanguagebank.com","www.ogulanguagebank.com",]
+ALLOWED_HOSTS = [
+    "ogulanguagebank.com",
+    "www.ogulanguagebank.com",
+    ".onrender.com",
+]
+
+
+
 
 
 # Application definition
@@ -157,3 +164,9 @@ LOGOUT_REDIRECT_URL ="core:home"
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://ogulanguagebank.com",
+    "https://www.ogulanguagebank.com",
+]
