@@ -42,10 +42,8 @@ sitemaps = {
     "articles": ArticleSitemap,
 
 }
-
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('olbcatalyst-dashboard/', admin.site.urls),
     path('',include('apps.core.urls')),
     path('dictionary/',include('apps.dictionary.urls')),
     path('accounts/',include('apps.accounts.urls')),
