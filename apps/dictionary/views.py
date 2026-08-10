@@ -24,6 +24,9 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 def word_list(request):
 
+    print("DATABASE ENGINE:", connection.vendor)
+    print("DATABASE HOST:", connection.settings_dict.get("HOST"))
+    print("DATABASE NAME:", connection.settings_dict.get("NAME"))
     print("TOTAL WORDS:", Word.objects.count())
     print("WORD STATUSES:", list(
         Word.objects.values_list("status", flat=True)
@@ -36,6 +39,8 @@ def word_list(request):
         "dialect",
         "part_of_speech",
     )
+
+
 
     search = request.GET.get("search")
     category = request.GET.get("category")
