@@ -1,0 +1,2444 @@
+[
+{
+  "model": "dictionary.dialect",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:27:31.132Z",
+    "updated_at": "2026-07-21T11:27:31.132Z",
+    "name": "ogu alatha",
+    "description": "they speak alatha language",
+    "region": "badagry"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-21T11:28:35.922Z",
+    "updated_at": "2026-07-21T11:28:35.922Z",
+    "name": "ogu goronu",
+    "description": "they speak gorogbe, they are jiwhenu",
+    "region": "goro"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-30T14:25:14.583Z",
+    "updated_at": "2026-07-30T14:25:14.583Z",
+    "name": "Toli",
+    "description": "Tolinu",
+    "region": "ogun state"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:25:45.525Z",
+    "updated_at": "2026-07-30T14:25:45.525Z",
+    "name": "Hula",
+    "description": "Hulanu",
+    "region": "badagry"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:26:14.568Z",
+    "updated_at": "2026-07-30T14:26:14.568Z",
+    "name": "Kadanu",
+    "description": "Kadanu",
+    "region": "ogun state"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:26:50.570Z",
+    "updated_at": "2026-07-30T14:26:50.570Z",
+    "name": "Ahovi",
+    "description": "Ahoviko",
+    "region": "benin"
+  }
+},
+{
+  "model": "dictionary.dialect",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T14:59:24.226Z",
+    "updated_at": "2026-07-30T14:59:24.226Z",
+    "name": "Seto",
+    "description": "Setonu",
+    "region": "badagry"
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:26:39.878Z",
+    "updated_at": "2026-07-21T11:26:39.878Z",
+    "name": "ohoo",
+    "slug": "ohoo",
+    "description": "a buiding",
+    "parent": null
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-21T11:42:46.730Z",
+    "updated_at": "2026-07-21T11:42:46.730Z",
+    "name": "emotion",
+    "slug": "JBKBJBJ",
+    "description": "HYGGY",
+    "parent": 1
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-21T11:44:41.079Z",
+    "updated_at": "2026-07-21T11:44:41.079Z",
+    "name": "thought",
+    "slug": "wish",
+    "description": "the thought",
+    "parent": 1
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:28:39.552Z",
+    "updated_at": "2026-07-30T14:28:39.552Z",
+    "name": "Verbs",
+    "slug": "verbs",
+    "description": "Action word",
+    "parent": 2
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:30:04.669Z",
+    "updated_at": "2026-07-30T14:30:04.669Z",
+    "name": "Nouns",
+    "slug": "nouns",
+    "description": "Naming words",
+    "parent": 2
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:31:21.040Z",
+    "updated_at": "2026-07-30T14:31:21.040Z",
+    "name": "Pronouns",
+    "slug": "pronouns",
+    "description": "Words used instead of a Nouns",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T14:32:26.045Z",
+    "updated_at": "2026-07-30T14:32:26.045Z",
+    "name": "Grammar",
+    "slug": "grammar",
+    "description": "grammatical words",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-30T14:33:13.722Z",
+    "updated_at": "2026-07-30T14:33:13.722Z",
+    "name": "Expressions",
+    "slug": "expressions",
+    "description": "to express oneself or somthing",
+    "parent": 4
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-30T14:33:48.321Z",
+    "updated_at": "2026-07-30T14:33:48.321Z",
+    "name": "Time",
+    "slug": "time",
+    "description": "duration of period",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-30T14:34:18.627Z",
+    "updated_at": "2026-07-30T14:34:18.627Z",
+    "name": "Months",
+    "slug": "months",
+    "description": "months",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-07-30T14:34:46.688Z",
+    "updated_at": "2026-07-30T14:34:46.688Z",
+    "name": "People",
+    "slug": "people",
+    "description": "people",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-07-30T14:35:20.562Z",
+    "updated_at": "2026-07-30T14:35:20.562Z",
+    "name": "Foods",
+    "slug": "foods",
+    "description": "food we eat",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-07-30T14:35:50.803Z",
+    "updated_at": "2026-07-30T14:35:50.803Z",
+    "name": "Animal",
+    "slug": "animal",
+    "description": "animals",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-07-30T14:36:25.899Z",
+    "updated_at": "2026-07-30T14:36:25.899Z",
+    "name": "Number",
+    "slug": "number",
+    "description": "Counting of numbers",
+    "parent": 4
+  }
+},
+{
+  "model": "dictionary.category",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-07-30T14:37:07.242Z",
+    "updated_at": "2026-07-30T14:37:07.242Z",
+    "name": "Colours",
+    "slug": "colours",
+    "description": "different colours",
+    "parent": 5
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:30:09.735Z",
+    "updated_at": "2026-07-21T11:30:09.735Z",
+    "name": "Noun",
+    "abbreviation": "Noun",
+    "description": "Naming words"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-21T11:30:48.114Z",
+    "updated_at": "2026-07-21T11:30:48.114Z",
+    "name": "Pronoun",
+    "abbreviation": "Pronoun",
+    "description": "Name used instead of a Noun"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-21T11:31:24.996Z",
+    "updated_at": "2026-07-21T11:31:24.996Z",
+    "name": "Adverb",
+    "abbreviation": "Adverb",
+    "description": "To describe verb"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-21T11:32:01.593Z",
+    "updated_at": "2026-07-21T11:32:01.593Z",
+    "name": "Adjective",
+    "abbreviation": "Adjective",
+    "description": "use to qualify a noun or pronoun"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:38:34.325Z",
+    "updated_at": "2026-07-30T14:38:34.325Z",
+    "name": "Preposition",
+    "abbreviation": "Prepositio",
+    "description": "Preposition"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:39:21.843Z",
+    "updated_at": "2026-07-30T14:39:21.843Z",
+    "name": "Conjuction",
+    "abbreviation": "conjuction",
+    "description": "to join words or sentences together"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T14:39:43.423Z",
+    "updated_at": "2026-07-30T14:39:43.423Z",
+    "name": "Determiner",
+    "abbreviation": "Determiner",
+    "description": "Determiner"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-30T14:40:28.251Z",
+    "updated_at": "2026-07-30T14:40:28.251Z",
+    "name": "Interjection",
+    "abbreviation": "Interjecti",
+    "description": "Interjection"
+  }
+},
+{
+  "model": "dictionary.partofspeech",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-30T14:41:04.205Z",
+    "updated_at": "2026-07-30T14:41:04.205Z",
+    "name": "Verb",
+    "abbreviation": "verbs",
+    "description": "Action words"
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.425Z",
+    "updated_at": "2026-07-21T11:52:48.425Z",
+    "ogu_word": "gbeto",
+    "slug": "gbeto",
+    "category": 1,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "nice",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-21T11:45:57Z",
+    "views": 2,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.294Z",
+    "updated_at": "2026-07-22T11:50:49.294Z",
+    "ogu_word": "aerovessel",
+    "slug": "aerovessel",
+    "category": 2,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "ygfyfyff",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 4,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.531Z",
+    "updated_at": "2026-07-27T20:13:09.531Z",
+    "ogu_word": "gunu",
+    "slug": "gunu",
+    "category": 1,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "ggsdhDS",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 15,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.620Z",
+    "updated_at": "2026-07-30T14:46:22.621Z",
+    "ogu_word": "Se",
+    "slug": "se",
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "etymology": "to perceive sound",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 3,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.858Z",
+    "updated_at": "2026-07-30T14:50:41.858Z",
+    "ogu_word": "Dagbewiwa",
+    "slug": "dagbewiwa",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "kindness",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 9,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.201Z",
+    "updated_at": "2026-07-30T14:57:50.201Z",
+    "ogu_word": "Na",
+    "slug": "na",
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "etymology": "to give",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 5,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.364Z",
+    "updated_at": "2026-07-30T15:47:27.364Z",
+    "ogu_word": "Akue",
+    "slug": "akue",
+    "category": 5,
+    "dialect": 1,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "Money",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 8,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.050Z",
+    "updated_at": "2026-07-31T12:50:00.050Z",
+    "ogu_word": "Mibayi",
+    "slug": "mibayi",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "Mibayi",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.292Z",
+    "updated_at": "2026-07-31T12:55:38.292Z",
+    "ogu_word": "namite",
+    "slug": "namite",
+    "category": 5,
+    "dialect": 7,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "How are you ?",
+    "status": "draft",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.387Z",
+    "updated_at": "2026-07-31T13:11:45.387Z",
+    "ogu_word": "Mijohotho",
+    "slug": "mijohotho",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "leave it like that",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 5,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-07-31T17:21:28.877Z",
+    "updated_at": "2026-07-31T17:21:28.877Z",
+    "ogu_word": "otin",
+    "slug": "otin",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:21:28.877Z",
+    "views": 2,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-07-31T17:48:42.107Z",
+    "updated_at": "2026-07-31T17:48:42.107Z",
+    "ogu_word": "Ayigba",
+    "slug": "ayigba",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:48:42.106Z",
+    "views": 6,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-07-31T17:49:04.077Z",
+    "updated_at": "2026-07-31T17:49:04.077Z",
+    "ogu_word": "Afonnu",
+    "slug": "afonnu",
+    "category": 5,
+    "dialect": 1,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:49:04.076Z",
+    "views": 3,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.616Z",
+    "updated_at": "2026-07-31T17:54:43.616Z",
+    "ogu_word": "Wa Dunu",
+    "slug": "wa-dunu",
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:54:43.615Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.680Z",
+    "updated_at": "2026-07-31T17:54:43.680Z",
+    "ogu_word": "Honwhesun",
+    "slug": "honwhesun",
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:54:43.679Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.733Z",
+    "updated_at": "2026-07-31T17:54:43.733Z",
+    "ogu_word": "Owe Wiwe",
+    "slug": "owe-wiwe",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:54:43.732Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.781Z",
+    "updated_at": "2026-07-31T17:54:43.781Z",
+    "ogu_word": "Yeton",
+    "slug": "yeton",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-07-31T17:54:43.780Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.526Z",
+    "updated_at": "2026-08-05T11:11:37.526Z",
+    "ogu_word": "Yanyan/",
+    "slug": "yanyan",
+    "category": 5,
+    "dialect": 3,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "Bad doingYan-yan",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-05T13:45:32.346Z",
+    "updated_at": "2026-08-05T13:45:32.346Z",
+    "ogu_word": "yinko",
+    "slug": "yinko",
+    "category": 5,
+    "dialect": 7,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 6,
+    "approved_by": 1,
+    "approved_at": "2026-08-05T13:45:32.346Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-07T13:27:51.945Z",
+    "updated_at": "2026-08-07T13:27:51.945Z",
+    "ogu_word": "Zinzin",
+    "slug": "zinzin",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "",
+    "status": "published",
+    "created_by": 1,
+    "approved_by": 1,
+    "approved_at": "2026-08-07T13:27:51.945Z",
+    "views": 0,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.word",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.377Z",
+    "updated_at": "2026-08-07T13:50:38.377Z",
+    "ogu_word": "Avi(Gbanja)",
+    "slug": "avigbanja",
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "etymology": "kolanut",
+    "status": "published",
+    "created_by": null,
+    "approved_by": null,
+    "approved_at": null,
+    "views": 7,
+    "search_count": 0,
+    "likes": 0
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.430Z",
+    "updated_at": "2026-07-21T11:52:48.430Z",
+    "word": 1,
+    "translation": "human being",
+    "notes": "it means human being",
+    "priority": 4
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.294Z",
+    "updated_at": "2026-07-22T11:50:49.294Z",
+    "word": 2,
+    "translation": "World",
+    "notes": "jggguuu",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.540Z",
+    "updated_at": "2026-07-27T20:13:09.541Z",
+    "word": 3,
+    "translation": "gu-nu",
+    "notes": "gunu le die",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.624Z",
+    "updated_at": "2026-07-30T14:46:22.625Z",
+    "word": 4,
+    "translation": "To perceive sound",
+    "notes": "To perceive sound",
+    "priority": 5
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.863Z",
+    "updated_at": "2026-07-30T14:50:41.863Z",
+    "word": 5,
+    "translation": "kindness",
+    "notes": "To be kindnrss",
+    "priority": 4
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.207Z",
+    "updated_at": "2026-07-30T14:57:50.207Z",
+    "word": 6,
+    "translation": "to give",
+    "notes": "to give",
+    "priority": 5
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.370Z",
+    "updated_at": "2026-07-30T15:47:27.370Z",
+    "word": 7,
+    "translation": "Money",
+    "notes": "Money",
+    "priority": 5
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.056Z",
+    "updated_at": "2026-07-31T12:50:00.056Z",
+    "word": 8,
+    "translation": "Mibayi",
+    "notes": "Mibayi",
+    "priority": 6
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.308Z",
+    "updated_at": "2026-07-31T12:55:38.308Z",
+    "word": 9,
+    "translation": "How are you ?",
+    "notes": "How are you ?",
+    "priority": 7
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.404Z",
+    "updated_at": "2026-07-31T13:11:45.404Z",
+    "word": 10,
+    "translation": "leave it like that",
+    "notes": "leave it like that",
+    "priority": 2
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-07-31T17:21:28.892Z",
+    "updated_at": "2026-07-31T17:21:28.892Z",
+    "word": 11,
+    "translation": "tree",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-07-31T17:48:42.120Z",
+    "updated_at": "2026-07-31T17:48:42.120Z",
+    "word": 12,
+    "translation": "Land",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-07-31T17:49:04.088Z",
+    "updated_at": "2026-07-31T17:49:04.088Z",
+    "word": 13,
+    "translation": "Morning",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.629Z",
+    "updated_at": "2026-07-31T17:54:43.629Z",
+    "word": 14,
+    "translation": "Come And Eat",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.691Z",
+    "updated_at": "2026-07-31T17:54:43.691Z",
+    "word": 15,
+    "translation": "Run",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.743Z",
+    "updated_at": "2026-07-31T17:54:43.743Z",
+    "word": 16,
+    "translation": "Holy Book",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.790Z",
+    "updated_at": "2026-07-31T17:54:43.790Z",
+    "word": 17,
+    "translation": "Theirs",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.526Z",
+    "updated_at": "2026-08-05T11:11:37.526Z",
+    "word": 18,
+    "translation": "Bad doing",
+    "notes": "Bad doing",
+    "priority": 5
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-05T13:45:32.360Z",
+    "updated_at": "2026-08-05T13:45:32.360Z",
+    "word": 19,
+    "translation": "Name",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-07T13:27:51.956Z",
+    "updated_at": "2026-08-07T13:27:51.956Z",
+    "word": 20,
+    "translation": "Weigth",
+    "notes": "",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.englishtranslation",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.381Z",
+    "updated_at": "2026-08-07T13:50:38.381Z",
+    "word": 21,
+    "translation": "kolanut",
+    "notes": "kolanut",
+    "priority": 1
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.431Z",
+    "updated_at": "2026-07-21T11:52:48.431Z",
+    "word": 1,
+    "meaning": "it means human being",
+    "context": "human being",
+    "notes": "a humanbeing"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.294Z",
+    "updated_at": "2026-07-22T11:50:49.294Z",
+    "word": 2,
+    "meaning": "hfyyuy",
+    "context": "nkkkklj",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.544Z",
+    "updated_at": "2026-07-27T20:13:09.544Z",
+    "word": 3,
+    "meaning": "an ogu tribe",
+    "context": "this is an ogu tribe",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.626Z",
+    "updated_at": "2026-07-30T14:46:22.626Z",
+    "word": 4,
+    "meaning": "To perceive soundTo perceive sound",
+    "context": "To perceive sound",
+    "notes": "To perceive sound"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.864Z",
+    "updated_at": "2026-07-30T14:50:41.864Z",
+    "word": 5,
+    "meaning": "kindness",
+    "context": "kindness",
+    "notes": "kindness"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.208Z",
+    "updated_at": "2026-07-30T14:57:50.208Z",
+    "word": 6,
+    "meaning": "to give",
+    "context": "to give",
+    "notes": "to give out"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.371Z",
+    "updated_at": "2026-07-30T15:47:27.371Z",
+    "word": 7,
+    "meaning": "Money",
+    "context": "Money",
+    "notes": "Money"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.057Z",
+    "updated_at": "2026-07-31T12:50:00.057Z",
+    "word": 8,
+    "meaning": "Mibayi",
+    "context": "Mibayi",
+    "notes": "Mibayi"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.309Z",
+    "updated_at": "2026-07-31T12:55:38.309Z",
+    "word": 9,
+    "meaning": "How are you ?",
+    "context": "How are you ?",
+    "notes": "How are you ?"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.404Z",
+    "updated_at": "2026-07-31T13:11:45.404Z",
+    "word": 10,
+    "meaning": "leave it like that",
+    "context": "leave it like that",
+    "notes": "leave it like that"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-07-31T17:21:28.902Z",
+    "updated_at": "2026-07-31T17:21:28.902Z",
+    "word": 11,
+    "meaning": "tree",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-07-31T17:48:42.132Z",
+    "updated_at": "2026-07-31T17:48:42.132Z",
+    "word": 12,
+    "meaning": "land(Floor)",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-07-31T17:49:04.099Z",
+    "updated_at": "2026-07-31T17:49:04.099Z",
+    "word": 13,
+    "meaning": "Morning",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.638Z",
+    "updated_at": "2026-07-31T17:54:43.638Z",
+    "word": 14,
+    "meaning": "Come And Eat",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.701Z",
+    "updated_at": "2026-07-31T17:54:43.701Z",
+    "word": 15,
+    "meaning": "run",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.751Z",
+    "updated_at": "2026-07-31T17:54:43.751Z",
+    "word": 16,
+    "meaning": "The Holy Book",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.798Z",
+    "updated_at": "2026-07-31T17:54:43.798Z",
+    "word": 17,
+    "meaning": "Theirs",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.526Z",
+    "updated_at": "2026-08-05T11:11:37.526Z",
+    "word": 18,
+    "meaning": "Bad doing",
+    "context": "Yan-yan",
+    "notes": "Yan-yanYan-yan"
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-05T13:45:32.371Z",
+    "updated_at": "2026-08-05T13:45:32.371Z",
+    "word": 19,
+    "meaning": "fdggequ;wey9y9ewe",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-07T13:27:51.965Z",
+    "updated_at": "2026-08-07T13:27:51.965Z",
+    "word": 20,
+    "meaning": "This object has WEIGTH",
+    "context": "",
+    "notes": ""
+  }
+},
+{
+  "model": "dictionary.meaning",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.381Z",
+    "updated_at": "2026-08-07T13:50:38.381Z",
+    "word": 21,
+    "meaning": "kolanut",
+    "context": "kolanut",
+    "notes": "kolanut"
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.432Z",
+    "updated_at": "2026-07-21T11:52:48.432Z",
+    "word": 1,
+    "ogu_sentence": "mimato gbetolomeh",
+    "english_sentence": "we are not in hand of human being",
+    "contributor": null
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.294Z",
+    "updated_at": "2026-07-22T11:50:49.294Z",
+    "word": 2,
+    "ogu_sentence": "ghgggugibi",
+    "english_sentence": "jbjhjuhhhhihiji",
+    "contributor": 4
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.547Z",
+    "updated_at": "2026-07-27T20:13:09.547Z",
+    "word": 3,
+    "ogu_sentence": "this is an ogu someone mm",
+    "english_sentence": "this is an ogu someone",
+    "contributor": null
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.627Z",
+    "updated_at": "2026-07-30T14:46:22.627Z",
+    "word": 4,
+    "ogu_sentence": "se owe",
+    "english_sentence": "know book",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.865Z",
+    "updated_at": "2026-07-30T14:50:41.865Z",
+    "word": 5,
+    "ogu_sentence": "Dagbewiwa",
+    "english_sentence": "kindness",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.209Z",
+    "updated_at": "2026-07-30T14:57:50.210Z",
+    "word": 6,
+    "ogu_sentence": "Na onu",
+    "english_sentence": "to give out something",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.373Z",
+    "updated_at": "2026-07-30T15:47:27.373Z",
+    "word": 7,
+    "ogu_sentence": "Akue",
+    "english_sentence": "Money",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.058Z",
+    "updated_at": "2026-07-31T12:50:00.058Z",
+    "word": 8,
+    "ogu_sentence": "Mibayi",
+    "english_sentence": "Mibayi",
+    "contributor": null
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.309Z",
+    "updated_at": "2026-07-31T12:55:38.309Z",
+    "word": 9,
+    "ogu_sentence": "na mi te do",
+    "english_sentence": "How are you ?",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.404Z",
+    "updated_at": "2026-07-31T13:11:45.404Z",
+    "word": 10,
+    "ogu_sentence": "leave it like that",
+    "english_sentence": "leave it like that",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-07-31T17:21:28.913Z",
+    "updated_at": "2026-07-31T17:21:28.913Z",
+    "word": 11,
+    "ogu_sentence": "the tree is tall",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-07-31T17:48:42.140Z",
+    "updated_at": "2026-07-31T17:48:42.140Z",
+    "word": 12,
+    "ogu_sentence": "The land belong to me",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 13,
+  "fields": {
+    "created_at": "2026-07-31T17:49:04.108Z",
+    "updated_at": "2026-07-31T17:49:04.108Z",
+    "word": 13,
+    "ogu_sentence": "i wake up early in the morning",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 14,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.650Z",
+    "updated_at": "2026-07-31T17:54:43.650Z",
+    "word": 14,
+    "ogu_sentence": "Come And Eat",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 15,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.711Z",
+    "updated_at": "2026-07-31T17:54:43.711Z",
+    "word": 15,
+    "ogu_sentence": "The Boy is Runing",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 16,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.759Z",
+    "updated_at": "2026-07-31T17:54:43.759Z",
+    "word": 16,
+    "ogu_sentence": "The Holy Book",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 17,
+  "fields": {
+    "created_at": "2026-07-31T17:54:43.807Z",
+    "updated_at": "2026-07-31T17:54:43.807Z",
+    "word": 17,
+    "ogu_sentence": "Its Theirs",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 18,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.526Z",
+    "updated_at": "2026-08-05T11:11:37.526Z",
+    "word": 18,
+    "ogu_sentence": "Yanyan wiwa mayon na gbetoYan-yan",
+    "english_sentence": "Yan-yan",
+    "contributor": null
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 19,
+  "fields": {
+    "created_at": "2026-08-05T13:45:32.381Z",
+    "updated_at": "2026-08-05T13:45:32.381Z",
+    "word": 19,
+    "ogu_sentence": "ghhugdfgdjdfshgyfy",
+    "english_sentence": "",
+    "contributor": 6
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 20,
+  "fields": {
+    "created_at": "2026-08-07T13:27:51.977Z",
+    "updated_at": "2026-08-07T13:27:51.977Z",
+    "word": 20,
+    "ogu_sentence": "This object has WEIGTH",
+    "english_sentence": "",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.examplesentence",
+  "pk": 21,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.381Z",
+    "updated_at": "2026-08-07T13:50:38.381Z",
+    "word": 21,
+    "ogu_sentence": "Gbanja",
+    "english_sentence": "kolanut",
+    "contributor": 1
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.434Z",
+    "updated_at": "2026-07-21T11:52:48.434Z",
+    "word": 1,
+    "dialect": 2,
+    "audio": "pronunciations/107-Al-maun-1.ogg",
+    "pronunciation_text": "gbe-to-lo-meh",
+    "contributor": 1,
+    "votes": 3,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.294Z",
+    "updated_at": "2026-07-22T11:50:49.294Z",
+    "word": 2,
+    "dialect": 2,
+    "audio": "pronunciations/101-Al-qaria.ogg",
+    "pronunciation_text": "ggghghhj",
+    "contributor": 4,
+    "votes": 0,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.552Z",
+    "updated_at": "2026-07-27T20:13:09.552Z",
+    "word": 3,
+    "dialect": 2,
+    "audio": "pronunciations/113-Al-falaq-1.ogg",
+    "pronunciation_text": "gu-nu",
+    "contributor": 1,
+    "votes": 5,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.628Z",
+    "updated_at": "2026-07-30T14:46:22.628Z",
+    "word": 4,
+    "dialect": 2,
+    "audio": "pronunciations/109-Al-kafiroon-1.ogg",
+    "pronunciation_text": "se",
+    "contributor": 1,
+    "votes": 2,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.866Z",
+    "updated_at": "2026-07-30T14:50:41.866Z",
+    "word": 5,
+    "dialect": 2,
+    "audio": "pronunciations/113-Al-falaq-1_JSxuRUg.ogg",
+    "pronunciation_text": "da-gbe-wi-wa",
+    "contributor": 1,
+    "votes": 2,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.211Z",
+    "updated_at": "2026-07-30T14:57:50.211Z",
+    "word": 6,
+    "dialect": 2,
+    "audio": "pronunciations/104-Al-humaza.ogg",
+    "pronunciation_text": "Na onu",
+    "contributor": 1,
+    "votes": 4,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.374Z",
+    "updated_at": "2026-07-30T15:47:27.374Z",
+    "word": 7,
+    "dialect": 1,
+    "audio": "pronunciations/109-Al-kafiroon-1_I3n0fqg.ogg",
+    "pronunciation_text": "Money",
+    "contributor": 1,
+    "votes": 2,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.059Z",
+    "updated_at": "2026-07-31T12:50:00.059Z",
+    "word": 8,
+    "dialect": 1,
+    "audio": "pronunciations/104-Al-humaza_s4RT10a.ogg",
+    "pronunciation_text": "Mibayi",
+    "contributor": 1,
+    "votes": 7,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.309Z",
+    "updated_at": "2026-07-31T12:55:38.309Z",
+    "word": 9,
+    "dialect": 1,
+    "audio": "pronunciations/104-Al-humaza_gD7doFX.ogg",
+    "pronunciation_text": "Na-mi-te-do",
+    "contributor": 1,
+    "votes": 6,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.404Z",
+    "updated_at": "2026-07-31T13:11:45.404Z",
+    "word": 10,
+    "dialect": 2,
+    "audio": "pronunciations/107-Al-maun-1_GHEvQ4I.ogg",
+    "pronunciation_text": "leave it like that",
+    "contributor": 1,
+    "votes": 4,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.526Z",
+    "updated_at": "2026-08-05T11:11:37.526Z",
+    "word": 18,
+    "dialect": 7,
+    "audio": "pronunciations/113-Al-falaq-1_CPADZ45.ogg",
+    "pronunciation_text": "Yan-yan",
+    "contributor": 1,
+    "votes": 5,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.pronunciation",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.387Z",
+    "updated_at": "2026-08-07T13:50:38.387Z",
+    "word": 21,
+    "dialect": 2,
+    "audio": "pronunciations/109-Al-kafiroon-1_xCQCSWq.ogg",
+    "pronunciation_text": "kolanut",
+    "contributor": 1,
+    "votes": 6,
+    "verified": true
+  }
+},
+{
+  "model": "dictionary.antonym",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-08-05T11:11:54.854Z",
+    "updated_at": "2026-08-05T11:11:54.854Z",
+    "word": 5,
+    "antonym": 18
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.453Z",
+    "updated_at": "2026-07-21T11:52:48.453Z",
+    "word": 1,
+    "spelling": "gbetolomeh"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.320Z",
+    "updated_at": "2026-07-22T11:50:49.320Z",
+    "word": 2,
+    "spelling": "Ayihongbemeh"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.604Z",
+    "updated_at": "2026-07-27T20:13:09.604Z",
+    "word": 3,
+    "spelling": "gu-nu"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.653Z",
+    "updated_at": "2026-07-30T14:46:22.653Z",
+    "word": 4,
+    "spelling": "se"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.870Z",
+    "updated_at": "2026-07-30T14:50:41.870Z",
+    "word": 5,
+    "spelling": "da-gbe-wi-wa"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.242Z",
+    "updated_at": "2026-07-30T14:57:50.242Z",
+    "word": 6,
+    "spelling": "Na onu"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.378Z",
+    "updated_at": "2026-07-30T15:47:27.378Z",
+    "word": 7,
+    "spelling": "Money"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.070Z",
+    "updated_at": "2026-07-31T12:50:00.070Z",
+    "word": 8,
+    "spelling": "Mibayi"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.325Z",
+    "updated_at": "2026-07-31T12:55:38.325Z",
+    "word": 9,
+    "spelling": "Na-mi-te-do"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.421Z",
+    "updated_at": "2026-07-31T13:11:45.421Z",
+    "word": 10,
+    "spelling": "leave it like that"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.543Z",
+    "updated_at": "2026-08-05T11:11:37.543Z",
+    "word": 18,
+    "spelling": "Yan-yan"
+  }
+},
+{
+  "model": "dictionary.alternativespelling",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.388Z",
+    "updated_at": "2026-08-07T13:50:38.388Z",
+    "word": 21,
+    "spelling": "gba-n-ja"
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.456Z",
+    "updated_at": "2026-07-21T11:52:48.456Z",
+    "word": 1,
+    "image": "word_images/1781775003943.jpg",
+    "caption": "human being",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.321Z",
+    "updated_at": "2026-07-22T11:50:49.321Z",
+    "word": 2,
+    "image": "word_images/1781775003943_13SOCym.jpg",
+    "caption": "jjiji",
+    "uploaded_by": 4
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.606Z",
+    "updated_at": "2026-07-27T20:13:09.606Z",
+    "word": 3,
+    "image": "word_images/1781776000875.jpg",
+    "caption": "gu-nu",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.654Z",
+    "updated_at": "2026-07-30T14:46:22.654Z",
+    "word": 4,
+    "image": "word_images/1781775990012.jpg",
+    "caption": "se oho",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.871Z",
+    "updated_at": "2026-07-30T14:50:41.871Z",
+    "word": 5,
+    "image": "word_images/1781775003943_K4UkhqL.jpg",
+    "caption": "da-gbe-wi-wa",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.244Z",
+    "updated_at": "2026-07-30T14:57:50.244Z",
+    "word": 6,
+    "image": "word_images/1781775990012_4vY8IA3.jpg",
+    "caption": "Na onu",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.379Z",
+    "updated_at": "2026-07-30T15:47:27.379Z",
+    "word": 7,
+    "image": "word_images/1750282013014.png",
+    "caption": "Money",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.070Z",
+    "updated_at": "2026-07-31T12:50:00.070Z",
+    "word": 8,
+    "image": "word_images/1781775990012_jmXqo9J.jpg",
+    "caption": "Mibayi",
+    "uploaded_by": null
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.325Z",
+    "updated_at": "2026-07-31T12:55:38.325Z",
+    "word": 9,
+    "image": "word_images/1781775997190.jpg",
+    "caption": "How are you ?",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.421Z",
+    "updated_at": "2026-07-31T13:11:45.421Z",
+    "word": 10,
+    "image": "word_images/1781775003943_OqCc1MB.jpg",
+    "caption": "leave it like that",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.543Z",
+    "updated_at": "2026-08-05T11:11:37.543Z",
+    "word": 18,
+    "image": "word_images/1781775003943_L1AlZ1h.jpg",
+    "caption": "Yan-yan",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordimage",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.388Z",
+    "updated_at": "2026-08-07T13:50:38.388Z",
+    "word": 21,
+    "image": "word_images/IMG-20260601-WA0064.jpg",
+    "caption": "kolanut",
+    "uploaded_by": 1
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:52:48.463Z",
+    "updated_at": "2026-07-21T11:52:48.463Z",
+    "word": 1,
+    "video": "word_videos/1781776008944.jpg",
+    "title": "naming words",
+    "description": "jndfsunsdvil"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:50:49.328Z",
+    "updated_at": "2026-07-22T11:50:49.328Z",
+    "word": 2,
+    "video": "word_videos/1781775990012.jpg",
+    "title": "hvhvj",
+    "description": "nihi;oij"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T20:13:09.622Z",
+    "updated_at": "2026-07-27T20:13:09.623Z",
+    "word": 3,
+    "video": "word_videos/1781776008944_Cfd4VVs.jpg",
+    "title": "man",
+    "description": "tttth,hvy"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:46:22.662Z",
+    "updated_at": "2026-07-30T14:46:22.662Z",
+    "word": 4,
+    "video": "word_videos/1781775997190_2.jpg",
+    "title": "se",
+    "description": "hear"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-30T14:50:41.877Z",
+    "updated_at": "2026-07-30T14:50:41.877Z",
+    "word": 5,
+    "video": "word_videos/1750284862111.jpg",
+    "title": "da-gbe-wi-wa",
+    "description": "To be kindness"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-07-30T14:57:50.252Z",
+    "updated_at": "2026-07-30T14:57:50.252Z",
+    "word": 6,
+    "video": "word_videos/1781775003943.jpg",
+    "title": "Na onu",
+    "description": "to give something"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 7,
+  "fields": {
+    "created_at": "2026-07-30T15:47:27.383Z",
+    "updated_at": "2026-07-30T15:47:27.383Z",
+    "word": 7,
+    "video": "word_videos/1750281215799.jpg",
+    "title": "Money",
+    "description": "Money"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 8,
+  "fields": {
+    "created_at": "2026-07-31T12:50:00.070Z",
+    "updated_at": "2026-07-31T12:50:00.070Z",
+    "word": 8,
+    "video": "word_videos/1781775003943_yo7KtHW.jpg",
+    "title": "Mibayi",
+    "description": "Mibayi"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 9,
+  "fields": {
+    "created_at": "2026-07-31T12:55:38.325Z",
+    "updated_at": "2026-07-31T12:55:38.325Z",
+    "word": 9,
+    "video": "word_videos/1781775990012_GbavAWs.jpg",
+    "title": "How are you ?",
+    "description": "How are you ?"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 10,
+  "fields": {
+    "created_at": "2026-07-31T13:11:45.421Z",
+    "updated_at": "2026-07-31T13:11:45.421Z",
+    "word": 10,
+    "video": "word_videos/1781776006070.jpg",
+    "title": "leave it like that",
+    "description": "leave it like that"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 11,
+  "fields": {
+    "created_at": "2026-08-05T11:11:37.559Z",
+    "updated_at": "2026-08-05T11:11:37.559Z",
+    "word": 18,
+    "video": "word_videos/1781775990012_dPPie0J.jpg",
+    "title": "Yan-yan",
+    "description": "Yan-yan"
+  }
+},
+{
+  "model": "dictionary.wordvideo",
+  "pk": 12,
+  "fields": {
+    "created_at": "2026-08-07T13:50:38.388Z",
+    "updated_at": "2026-08-07T13:50:38.388Z",
+    "word": 21,
+    "video": "word_videos/IMG-20260601-WA0064.jpg",
+    "title": "kolanut",
+    "description": "kolanut"
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 1,
+  "fields": {
+    "created_at": "2026-07-21T11:54:11.457Z",
+    "updated_at": "2026-07-21T11:54:11.457Z",
+    "word": 1,
+    "date": "2026-07-21",
+    "note": "learn this",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 2,
+  "fields": {
+    "created_at": "2026-07-22T11:40:27.730Z",
+    "updated_at": "2026-07-22T11:40:27.730Z",
+    "word": 1,
+    "date": "2026-07-22",
+    "note": "explore for more",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 3,
+  "fields": {
+    "created_at": "2026-07-27T21:19:33.178Z",
+    "updated_at": "2026-07-27T21:19:33.178Z",
+    "word": 3,
+    "date": "2026-07-27",
+    "note": "ogu",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 4,
+  "fields": {
+    "created_at": "2026-07-30T14:58:21.807Z",
+    "updated_at": "2026-07-30T14:58:21.807Z",
+    "word": 5,
+    "date": "2026-07-30",
+    "note": "Dagbewiwayon",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 5,
+  "fields": {
+    "created_at": "2026-07-31T13:13:18.579Z",
+    "updated_at": "2026-07-31T13:13:35.219Z",
+    "word": 10,
+    "date": "2026-07-31",
+    "note": "leave it like that",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordoftheday",
+  "pk": 6,
+  "fields": {
+    "created_at": "2026-08-07T13:53:28.176Z",
+    "updated_at": "2026-08-07T13:53:28.176Z",
+    "word": 21,
+    "date": "2026-08-07",
+    "note": "Gba-n-ja",
+    "is_active": true
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 14,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "otin",
+    "english_translation": "tree",
+    "meaning": "tree",
+    "example_sentence": "the tree is tall",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:21:28.925Z",
+    "approved_word": 11,
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:12:33.458Z",
+    "updated_at": "2026-07-31T17:21:28.925Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 15,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Ayigba",
+    "english_translation": "Land",
+    "meaning": "land(Floor)",
+    "example_sentence": "The land belong to me",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:48:42.152Z",
+    "approved_word": 12,
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:39:08.807Z",
+    "updated_at": "2026-07-31T17:48:42.152Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 16,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Afonnu",
+    "english_translation": "Morning",
+    "meaning": "Morning",
+    "example_sentence": "i wake up early in the morning",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:49:04.118Z",
+    "approved_word": 13,
+    "category": 5,
+    "dialect": 1,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:40:32.254Z",
+    "updated_at": "2026-07-31T17:49:04.119Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 18,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Yeton",
+    "english_translation": "Theirs",
+    "meaning": "Theirs",
+    "example_sentence": "Its Theirs",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:54:43.815Z",
+    "approved_word": 17,
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:50:26.393Z",
+    "updated_at": "2026-07-31T17:54:43.816Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 19,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Owe Wiwe",
+    "english_translation": "Holy Book",
+    "meaning": "The Holy Book",
+    "example_sentence": "The Holy Book",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:54:43.767Z",
+    "approved_word": 16,
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:51:36.489Z",
+    "updated_at": "2026-07-31T17:54:43.767Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 20,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Honwhesun",
+    "english_translation": "Run",
+    "meaning": "run",
+    "example_sentence": "The Boy is Runing",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:54:43.719Z",
+    "approved_word": 15,
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:52:37.154Z",
+    "updated_at": "2026-07-31T17:54:43.719Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 21,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Wa Dunu",
+    "english_translation": "Come And Eat",
+    "meaning": "Come And Eat",
+    "example_sentence": "Come And Eat",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-07-31T17:54:43.660Z",
+    "approved_word": 14,
+    "category": 4,
+    "dialect": 2,
+    "part_of_speech": 9,
+    "difficulty": "beginner",
+    "created_at": "2026-07-31T17:53:54.194Z",
+    "updated_at": "2026-07-31T17:54:43.660Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 22,
+  "fields": {
+    "contributor": 6,
+    "ogu_word": "yinko",
+    "english_translation": "Name",
+    "meaning": "fdggequ;wey9y9ewe",
+    "example_sentence": "ghhugdfgdjdfshgyfy",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-08-05T13:45:32.390Z",
+    "approved_word": 19,
+    "category": 5,
+    "dialect": 7,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-08-05T13:44:08.927Z",
+    "updated_at": "2026-08-05T13:45:32.390Z"
+  }
+},
+{
+  "model": "dictionary.wordcontribution",
+  "pk": 23,
+  "fields": {
+    "contributor": 1,
+    "ogu_word": "Zinzin",
+    "english_translation": "Weigth",
+    "meaning": "This object has WEIGTH",
+    "example_sentence": "This object has WEIGTH",
+    "status": "approved",
+    "admin_note": "",
+    "reviewed_by": 1,
+    "reviewed_at": "2026-08-07T13:27:51.985Z",
+    "approved_word": 20,
+    "category": 5,
+    "dialect": 2,
+    "part_of_speech": 1,
+    "difficulty": "beginner",
+    "created_at": "2026-08-07T13:27:10.726Z",
+    "updated_at": "2026-08-07T13:27:51.985Z"
+  }
+}
+]
