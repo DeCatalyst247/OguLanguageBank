@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from datetime import date
-from django.db.models import Q
+from django.db.models import Q, connection
+
 
 
 from apps.culture.models import (
@@ -24,6 +25,8 @@ from django.contrib import messages
 
 
 def home(request):
+    print("DATABASE ENGINE:", connection.vendor)
+    print("DATABASE NAME:", connection.settings_dict.get("NAME"))
 
     word_of_the_day = WordOfTheDay.objects.select_related(
         "word",
@@ -74,6 +77,9 @@ def home(request):
         "proverb_count": Proverb.objects.count(),
 
     }
+    
+
+
 
     return render(
         request,
