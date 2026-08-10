@@ -16,7 +16,18 @@ from django.contrib.admin.views.decorators import staff_member_required
 
 
 
+#def word_list(request):
+
+  #  words = Word.objects.filter(
+ #       status="published",
+#    ).select_related(
+
 def word_list(request):
+
+    print("TOTAL WORDS:", Word.objects.count())
+    print("WORD STATUSES:", list(
+        Word.objects.values_list("status", flat=True)
+    ))
 
     words = Word.objects.filter(
         status="published",
