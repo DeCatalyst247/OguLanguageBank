@@ -6,3 +6,7 @@ db.sqlite3
 media/
 staticfiles/
 data.json
+inspect_production.py
+dictionary_clean.json
+
+dictionary_data.json
